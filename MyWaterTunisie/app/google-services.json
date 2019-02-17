@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "575160320587",
+    "firebase_url": "https://mywatertunisie-eb4ce.firebaseio.com",
+    "project_id": "mywatertunisie-eb4ce",
+    "storage_bucket": "mywatertunisie-eb4ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575160320587:android:9281eb8f9eebf210",
+        "android_client_info": {
+          "package_name": "tn.esprit.mywatertunisie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575160320587-7lm9vfc92rrn9uk002523inc6bl7v09v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tn.esprit.mywatertunisie",
+            "certificate_hash": "69299681501bc7205ed5a6b4cd1956566d99b4d9"
+          }
+        },
+        {
+          "client_id": "575160320587-qsjld9675sf7jrtsf8v0ar72lqo6oimb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZjWoFYx97sjxvdztRXZisplrZtJaS2ps"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575160320587-qsjld9675sf7jrtsf8v0ar72lqo6oimb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

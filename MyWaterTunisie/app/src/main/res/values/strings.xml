@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Water Tunisie</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="normalTextRes">Butter Doesnt fly!</string>
+    <string name="subTextRes">Little butter Doesnt fly, either!</string>
+
+
+</resources>

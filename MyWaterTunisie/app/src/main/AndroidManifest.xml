@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tn.esprit.mywatertunisie">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.MainActivity" />
+
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Activities.LoginActivity" />
+        <activity android:name=".Activities.ProfilActivity" />
+        <activity android:name=".Activities.ChantierActivity" />
+        <activity android:name=".Activities.DetailsProdActivity" />
+        <activity android:name=".Activities.ShowCartActivity" />
+        <activity android:name=".Activities.ChatActivity" />
+        <activity android:name=".Activities.DevisPiscineActivity" />
+        <activity android:name=".Activities.AdminMainActivity" />
+        <activity android:name=".Activities.AdminGestionUserActivity" />
+        <activity android:name=".Activities.AdminGestionProdActivity" />
+        <activity android:name=".Activities.AdminGestionElectriciteActivity" />
+        <activity android:name=".Activities.AdminDetailsUser" />
+        <activity
+            android:name=".Activities.Pop"
+            android:theme="@style/AppTheme.CustomThemePopUp" />
+        <activity android:name=".Activities.DashboardActivity" />
+
+        <activity android:name=".APersonalSpalsh">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

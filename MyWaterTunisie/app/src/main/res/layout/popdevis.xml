@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/a"
+    tools:context=".Activities.Pop">
+
+
+    <TextView
+        android:id="@+id/devisTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="77dp"
+        android:text="le prix de votre piscine est estimé à "
+        android:textAlignment="center"
+        android:textColor="@color/default_bmb_shareLine2Color"
+        android:textSize="23sp" />
+
+
+    <TextView
+        android:id="@+id/prixTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="162dp"
+        android:text="TextView"
+        android:textColor="@color/default_bmb_shareLine2Color"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="123dp"
+        android:text="Pour plus de renseignements \n Veuillez nous contacter sur"
+        android:textAlignment="center"
+        android:textColor="@color/whiteColor"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:onClick="CallResp"
+        android:text="22 797 193"
+        android:textAlignment="center"
+        android:textColor="@color/whiteColor"
+        android:textSize="22dp" />
+
+</RelativeLayout>

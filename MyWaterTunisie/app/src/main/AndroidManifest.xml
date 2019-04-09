@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activities.MainActivity" />
-
         <activity android:name=".Activities.RegisterActivity" />
         <activity android:name=".Activities.LoginActivity" />
         <activity android:name=".Activities.ProfilActivity" />
@@ -27,12 +26,14 @@
         <activity android:name=".Activities.AdminGestionProdActivity" />
         <activity android:name=".Activities.AdminGestionElectriciteActivity" />
         <activity android:name=".Activities.AdminDetailsUser" />
-        <activity
-            android:name=".Activities.Pop"
-            android:theme="@style/AppTheme.CustomThemePopUp" />
-        <activity android:name=".Activities.DashboardActivity" />
+        <activity android:name=".Activities.DashboardActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
-        <activity android:name=".APersonalSpalsh">
+        <activity android:name=".Activities.Pop"
+            android:theme="@style/AppTheme.CustomThemePopUp" />
+
+        <activity android:name=".APersonalSpalsh"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

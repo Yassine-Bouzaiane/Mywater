@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
                 Log.e("Shared Pref login5", "if admin");
 
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                 Toast.makeText(getApplicationContext(), "CHANGE THE EMAIL PATTERN", Toast.LENGTH_SHORT).show();
 
                 Log.e("Shared Pref login6", "after ifs");
@@ -161,7 +161,7 @@ public class LoginActivity extends AppCompatActivity {
                             finish();
                             switch (user.getTypeUser()) {
                                 case "user":
-                                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
 
                                     break;
                                 case "admin":

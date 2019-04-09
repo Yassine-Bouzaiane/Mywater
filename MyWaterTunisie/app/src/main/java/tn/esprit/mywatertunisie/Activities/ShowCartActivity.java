@@ -37,7 +37,7 @@ import tn.esprit.mywatertunisie.URLs;
 
 
 public class ShowCartActivity extends AppCompatActivity {
-//    public RecyclerView mRecyclerView;
+    //    public RecyclerView mRecyclerView;
 //    private RecyclerView.Adapter mAdapter;
 //    private RecyclerView.LayoutManager mLayoutManager;
     private List<Cart> listProdCart;
@@ -48,6 +48,7 @@ public class ShowCartActivity extends AppCompatActivity {
 
     RecyclerViewCartAdapter recyclerViewCartAdapter;
     ProgressBar pbElect;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,8 +104,6 @@ public class ShowCartActivity extends AppCompatActivity {
         //  mRecyclerView.setAdapter(mAdapter);
 
 
-
-
     }
 
 
@@ -123,12 +122,12 @@ public class ShowCartActivity extends AppCompatActivity {
 
                     //         JSONObject jsonObject = new JSONObject(response);
                     JSONArray array = new JSONArray(response);
-listProdCart.clear();
+                    listProdCart.clear();
                     for (int i = 0; i < array.length(); i++) {
 
                         JSONObject o = array.getJSONObject(i);
                         Cart cart = new Cart(
-                                o.getInt("id_carte"),
+
                                 o.getInt("id_user"),
                                 o.getInt("id_prod"),
                                 o.getInt("quantiteCart"),
@@ -146,7 +145,7 @@ listProdCart.clear();
                     }
                     Log.e("AddTo ListProd", listProdCart.toString());
 
-recyclerViewCartAdapter.notifyDataSetChanged();
+                    recyclerViewCartAdapter.notifyDataSetChanged();
                 } catch (JSONException e) {
 
                     Log.e("Cart ERREUR JSONexp >>>", e.getMessage());

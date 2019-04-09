@@ -3,6 +3,7 @@ package tn.esprit.mywatertunisie.Activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -53,12 +55,10 @@ public class DetailsProdActivity extends AppCompatActivity {
     String url_image_prod;
     User user;
     int quantite = 666;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_prod);
-
         intent = getIntent();
         idProd = intent.getIntExtra("idProd", 0);
         url_prod_id = URLs.URL_PROD_BY_ID + idProd;
@@ -71,15 +71,11 @@ public class DetailsProdActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-                Log.e("DDDDDDD", "DDDDDDDDDD");
 
                 try {
-                    Log.e("EEEEEE", "EEEEEEEEEEEE");
 
                     //         JSONObject jsonObject = new JSONObject(response);
-                    Log.e("FFFFFFF", "FFFFFFFFFFF");
                     JSONArray array = new JSONArray(response);
-                    Log.e("GGGGGGG", "GGGGGGGGGGGG");
 
 
                     JSONObject o = array.getJSONObject(0);
@@ -135,6 +131,7 @@ public class DetailsProdActivity extends AppCompatActivity {
                     public void onResponse(String response) {
 
                         Log.e("HttpClient", "success! response: " + response);
+                        Log.e("Params Cart >>>", "UserID: "+String.valueOf(user.getId())+ "\n ProdID: "+String.valueOf(idProd));
 
                         Toast.makeText(getApplicationContext(), "Le produit « " + tv_title.getText() + " » a été ajouté au panier", Toast.LENGTH_SHORT).show();
 
@@ -146,16 +143,16 @@ public class DetailsProdActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        Log.e("Params Cart >>>", "UserID: "+String.valueOf(user.getId())+ "\n ProdID: "+String.valueOf(idProd));
                         Log.e("ERREUR JSON>>>>>>", "error Detail Prod: " + error.getMessage());
                     }
                 }) {
             @Override
             protected Map<String, String> getParams() {
 
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("create_id_prod", String.valueOf(idProd));
+                Map<String, String> params = new HashMap<>();
                 params.put("create_id_user", String.valueOf(user.getId()));
-
+                params.put("create_id_prod", String.valueOf(idProd));
                 params.put("create_quantite", String.valueOf(quantite));
 
                 Log.e("Map", "Map Finished");

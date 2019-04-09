@@ -1,7 +1,6 @@
 package tn.esprit.mywatertunisie.Entities;
 
 public class Cart {
-    private int idCart;
     private int idUser;
     private int idProd;
     private int quantiteCart;
@@ -57,10 +56,9 @@ public class Cart {
 //    }
 
 
-    public Cart(int idCart, int idUser, int idProd,
+    public Cart( int idUser, int idProd,
                 int quantiteCart, String reference, String nom, String description,
                 int prix, String categorie, String img, int quantite) {
-        this.idCart = idCart;
         this.idUser = idUser;
         this.idProd = idProd;
         this.quantiteCart = quantiteCart;
@@ -73,13 +71,7 @@ public class Cart {
         this.quantite = quantite;
     }
 
-    public int getIdCart() {
-        return idCart;
-    }
 
-    public void setIdCart(int idCart) {
-        this.idCart = idCart;
-    }
 
     public int getIdUser() {
         return idUser;
@@ -164,7 +156,6 @@ public class Cart {
     @Override
     public String toString() {
         return "Cart{" +
-                "idCart=" + idCart +
                 ", idUser=" + idUser +
                 ", idProd=" + idProd +
                 ", quantiteCart=" + quantiteCart +

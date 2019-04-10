@@ -1,27 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/Panier"
-            android:icon="@drawable/ic_action_keyboard"
-            android:title="Panier" />
-        <item
-            android:id="@+id/Devis"
-            android:icon="@drawable/ic_action_keyboard"
-            android:title="Créer un Devis" />
-        <item
-            android:id="@+id/Profile"
-            android:icon="@drawable/ic_action_keyboard"
-            android:title="Profile" />
-        <item
-            android:id="@+id/Chat"
-            android:icon="@drawable/ic_action_keyboard"
-            android:title="Chat" />
-        <item
-            android:id="@+id/Logout"
-            android:icon="@drawable/ic_action_keyboard"
-            android:title="Logout" />
 
-
-    </group>
 </menu>

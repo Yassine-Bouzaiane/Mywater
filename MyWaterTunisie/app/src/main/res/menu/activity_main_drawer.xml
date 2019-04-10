@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_photos"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="@string/nav_photos" />
+        <item
+            android:id="@+id/nav_movies"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="@string/nav_movies" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="@string/nav_notifications" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="@string/nav_settings" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+        </menu>
+    </item>
+
+</menu>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Panier"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="Panier" />
+        <item
+            android:id="@+id/Devis"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="Créer un Devis" />
+        <item
+            android:id="@+id/Profile"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="Profile" />
+        <item
+            android:id="@+id/Chat"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="Chat" />
+        <item
+            android:id="@+id/Logout"
+            android:icon="@drawable/ic_action_keyboard"
+            android:title="Logout" />
+
+
+    </group>
+</menu>
+-->

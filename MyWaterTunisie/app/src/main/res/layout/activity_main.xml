@@ -5,34 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".Activities.MainActivity">
 
-     <!--   <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-                <android.support.v7.widget.Toolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:navigationIcon="@drawable/ic_menu"
-                    app:titleTextColor="@color/whiteColor"
-                    app:title="@string/app_name"/>
-        </android.support.design.widget.AppBarLayout>
+    <!--   <android.support.design.widget.AppBarLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+               <android.support.v7.widget.Toolbar
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:navigationIcon="@drawable/ic_menu"
+                   app:titleTextColor="@color/whiteColor"
+                   app:title="@string/app_name"/>
+       </android.support.design.widget.AppBarLayout>
 -->
 
 
 
-
-    <android.support.design.widget.TabLayout
-            android:id="@+id/sliding_tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabMode="fixed" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white" />
 
     <!--
      <android.support.design.widget.AppBarLayout
@@ -60,39 +49,81 @@
  -->
 
     <com.michaldrabik.tapbarmenulib.TapBarMenu
-        android:id="@+id/tapBarMenu"
+        android:id="@+id/tapBarMenuProducts"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        app:tbm_showItems="true"
-        android:layout_marginBottom="24dp"
-        >
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:tbm_backgroundColor="@color/colorAccent"
+        app:tbm_buttonPosition="right"
+        app:tbm_menuAnchor="top"
+        app:tbm_showItems="true">
 
         <ImageView
-            android:id="@+id/item1"
+            android:id="@+id/menu_Cart"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="1"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/ic_action_keyboard"
-            />
+            android:onClick="toDashboard"
+            android:paddingTop="0dp"
+            android:src="@drawable/menu_blanc" />
 
         <Space
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            />
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
 
         <ImageView
-            android:id="@+id/item2"
+            android:id="@+id/product_Cart"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="toCart"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/ic_action_keyboard"
-            />
+            android:src="@drawable/add_to_cart_blanc" />
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/devis_Cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="toDevis"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/give_money_blanc" />
+
+        <Space
+            android:layout_width="6dp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/phone_Cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_weight="1"
+            android:onClick="callMyWater"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/telephone_blanc" />
 
     </com.michaldrabik.tapbarmenulib.TapBarMenu>
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd" />
 </LinearLayout>

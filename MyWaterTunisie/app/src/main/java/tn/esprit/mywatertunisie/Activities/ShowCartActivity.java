@@ -58,7 +58,7 @@ public class ShowCartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_cart);
 
         tapBarMenu = findViewById(R.id.tapBarMenuCart);
-      //  tapBarMenu.close();
+       tapBarMenu.close();
         tapBarMenu.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 tapBarMenu.toggle();

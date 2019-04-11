@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tapBarMenu = findViewById(R.id.tapBarMenu);
+        tapBarMenu = findViewById(R.id.tapBarMenuProducts);
+        tapBarMenu.close();
         tapBarMenu.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 tapBarMenu.toggle();
@@ -122,6 +123,34 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
+    public void toDashboard(View view) {
+        Toast.makeText(this, "Dashboard", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void callMyWater(View view) {
+        Toast.makeText(this, "Appeler MyWater", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:+21622797193"));
+        startActivity(intent);
+    }
+
+    public void toDevis(View view) {
+        Toast.makeText(this, "Demande de Devis", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, DevisPiscineActivity.class);
+        startActivity(intent);
+    }
+
+    public void toCart(View view) {
+        Toast.makeText(this, "Panier", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this, ShowCartActivity.class);
+        startActivity(intent);
+    }
+
 
     /*
     @Override

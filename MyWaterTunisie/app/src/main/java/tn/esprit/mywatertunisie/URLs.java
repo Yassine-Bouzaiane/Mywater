@@ -4,8 +4,8 @@ public class URLs {
 
 //        private static final String baseURL = "http://172.18.88.182";
 //    private static final String baseURL = "http://10.0.2.2";
-//        private static final String baseURL = "http://192.168.43.234";
-    private static final String baseURL = "http://192.168.1.11";
+        private static final String baseURL = "http://192.168.43.52";
+//    private static final String baseURL = "http://192.168.1.11";
     private static final String basePORT = ":3003";
     //    public static final String URL_REGISTER = "http://localhost:3003/user_create";
     public static final String URL_REGISTER = baseURL + basePORT + "/user/user_create";

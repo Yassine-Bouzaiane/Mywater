@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#801088F2"
     android:background="@drawable/tap2"
     tools:context=".Fragments.Eau_Fragment">
 <ProgressBar

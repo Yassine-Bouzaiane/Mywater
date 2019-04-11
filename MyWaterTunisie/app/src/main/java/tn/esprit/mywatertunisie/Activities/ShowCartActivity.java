@@ -20,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.michaldrabik.tapbarmenulib.TapBarMenu;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,11 +49,21 @@ public class ShowCartActivity extends AppCompatActivity {
 
     RecyclerViewCartAdapter recyclerViewCartAdapter;
     ProgressBar pbElect;
+    TapBarMenu tapBarMenu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_cart);
+
+        tapBarMenu = findViewById(R.id.tapBarMenuCart);
+      //  tapBarMenu.close();
+        tapBarMenu.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                tapBarMenu.toggle();
+            }
+        });
 
 
 //        mRecyclerView = findViewById(R.id.show_cart_recyclerview);
@@ -221,4 +232,29 @@ public class ShowCartActivity extends AppCompatActivity {
     }
 
 
+    public void toDashboard(View view) {
+        Toast.makeText(this, "Dashboard", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ShowCartActivity.this, DashboardActivity.class);
+        startActivity(intent);
+    }
+
+
+    public void callMyWater(View view) {
+        Toast.makeText(this, "Appeler MyWater", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:+21622797193"));
+        startActivity(intent);
+    }
+
+    public void toDevis(View view) {
+        Toast.makeText(this, "Demande de Devis", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ShowCartActivity.this, DevisPiscineActivity.class);
+        startActivity(intent);
+    }
+
+    public void toProducts(View view) {
+        Toast.makeText(this, "Produits", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ShowCartActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
 }

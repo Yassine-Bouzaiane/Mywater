@@ -6,13 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import tn.esprit.mywatertunisie.R;
 import tn.esprit.mywatertunisie.SharedPrefManager;
 
 public class DashboardActivity extends AppCompatActivity {
-    Button panier, produits, profile, devis, contact, logout;
+    Button panier, produits,  contact, logout, profile, devis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

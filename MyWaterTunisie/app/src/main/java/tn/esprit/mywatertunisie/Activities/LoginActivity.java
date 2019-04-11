@@ -36,13 +36,13 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
 
         //  Log.e("Shared Pref login", ""+SharedPrefManager.getInstance(this).getUser());
 
         Log.e("Shared Pref Register", "before ifs");
 
 
-        setContentView(R.layout.activity_login);
 
 
         editTextEmail = findViewById(R.id.login_email);

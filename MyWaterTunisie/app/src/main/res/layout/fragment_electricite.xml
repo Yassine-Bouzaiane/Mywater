@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/flash2"
+    android:backgroundTint="#801088F2"
     tools:context=".Fragments.Electricite_Fragment">
     <ProgressBar
         android:layout_width="wrap_content"

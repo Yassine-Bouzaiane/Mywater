@@ -19,14 +19,14 @@ import tn.esprit.mywatertunisie.Entities.Cart;
 import tn.esprit.mywatertunisie.R;
 import tn.esprit.mywatertunisie.URLs;
 
-public class RecyclerViewCartAdapter extends BaseAdapter {
+public class ListViewCartAdapter extends BaseAdapter {
 
 
     private List<Cart> listData;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public RecyclerViewCartAdapter(Context aContext, List<Cart> listData) {
+    public ListViewCartAdapter(Context aContext, List<Cart> listData) {
         this.context = aContext;
         this.listData = listData;
         layoutInflater = LayoutInflater.from(aContext);
@@ -106,13 +106,13 @@ public class RecyclerViewCartAdapter extends BaseAdapter {
 
 
 
-        //extends RecyclerView.Adapter<RecyclerViewCartAdapter.MyViewHolder> {
+        //extends RecyclerView.Adapter<ListViewCartAdapter.MyViewHolder> {
 
 
 /*    Context ctx;
     List<Cart> mData;
 
-    public RecyclerViewCartAdapter(Context ctx, List<Cart> mData) {
+    public ListViewCartAdapter(Context ctx, List<Cart> mData) {
         Log.e("adapt ","adapt1");
         Log.e("adapt item",""+mData.size());
         this.ctx = ctx;
@@ -126,7 +126,7 @@ public class RecyclerViewCartAdapter extends BaseAdapter {
 
         View view;
         view = LayoutInflater.from(ctx).inflate(R.layout.item_eaux, viewGroup, false);
-        RecyclerViewCartAdapter.MyViewHolder viewHolder = new RecyclerViewCartAdapter.MyViewHolder(view);
+        ListViewCartAdapter.MyViewHolder viewHolder = new ListViewCartAdapter.MyViewHolder(view);
         return viewHolder;    }
 
     *//*@NonNull
@@ -136,12 +136,12 @@ public class RecyclerViewCartAdapter extends BaseAdapter {
 
         View view;
         view = LayoutInflater.from(ctx).inflate(R.layout.item_eaux, viewGroup, false);
-        RecyclerViewCartAdapter.MyViewHolder viewHolder = new RecyclerViewCartAdapter.MyViewHolder(view);
+        ListViewCartAdapter.MyViewHolder viewHolder = new ListViewCartAdapter.MyViewHolder(view);
         return viewHolder;
     }*//*
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerViewCartAdapter.MyViewHolder myViewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ListViewCartAdapter.MyViewHolder myViewHolder, final int position) {
         Log.e("adapt ","adapt3");
 
         myViewHolder.tv_name.setText(mData.get(position).getNom());

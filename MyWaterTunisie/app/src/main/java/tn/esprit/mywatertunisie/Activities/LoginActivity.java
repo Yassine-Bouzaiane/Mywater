@@ -1,7 +1,12 @@
 package tn.esprit.mywatertunisie.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.BaseTransientBottomBar;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
@@ -32,6 +37,7 @@ import tn.esprit.mywatertunisie.VolleySingleton;
 
 public class LoginActivity extends AppCompatActivity {
     EditText editTextEmail, editTextPassword;
+    Snackbar snackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +47,6 @@ public class LoginActivity extends AppCompatActivity {
         //  Log.e("Shared Pref login", ""+SharedPrefManager.getInstance(this).getUser());
 
         Log.e("Shared Pref Register", "before ifs");
-
-
 
 
         editTextEmail = findViewById(R.id.login_email);
@@ -91,8 +95,32 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // View v = findViewById(android.R.id.content);
 
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifiNetwork = cm.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo mobileNetwork = cm.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+
+        if (wifiNetwork != null && wifiNetwork.isConnected()) {
+            Toast.makeText(getApplicationContext(), "Connected to Internet", Toast.LENGTH_LONG).show();
+            //      Snackbar.make(v, "Connected To Internet", Snackbar.LENGTH_LONG);
+            Log.e("SnackBar1 >>> ", "WIFI Network");
+        } else if (mobileNetwork != null && mobileNetwork.isConnected()) {
+            Log.e("SnackBar2 >>> ", "Mobile Network");
+            //     Snackbar.make(v, "Connected To Internet", Snackbar.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(), "Connected to Internet", Toast.LENGTH_LONG).show();
+        } else if (activeNetwork != null && activeNetwork.isConnected()) {
+            //        Snackbar.make(v, "Connected To Internet", Snackbar.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(), "Connected to Internet", Toast.LENGTH_LONG).show();
+            Log.e("SnackBar3 >>> ", "Active Network");
+        } else {
+            //        Snackbar.make(v, "Not Connected To Internet", Snackbar.LENGTH_LONG);
+            Toast.makeText(getApplicationContext(), "Not Connected to Internet", Toast.LENGTH_LONG).show();
+            Log.e("SnackBar4 >>> ", "No Network");
+        }
     }
+
 
     private void userLogin() {
         //first getting the values
@@ -106,11 +134,11 @@ public class LoginActivity extends AppCompatActivity {
             editTextEmail.requestFocus();
             return;
         }
-//        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-//            editTextEmail.setError("Enter a valid email");
-//            editTextEmail.requestFocus();
-//            return;
-//        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Enter a valid email");
+            editTextEmail.requestFocus();
+            return;
+        }
 
 
         if (TextUtils.isEmpty(password)) {
@@ -201,4 +229,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+//        super.onBackPressed();
+        Log.e("Back Pressed", "Not Going Back though lol!");
+    }
 }

@@ -52,7 +52,7 @@ public class DashboardActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), ProfilActivity.class));
+                startActivity(new Intent(getApplicationContext(), DetailProfile.class));
 
             }
         });

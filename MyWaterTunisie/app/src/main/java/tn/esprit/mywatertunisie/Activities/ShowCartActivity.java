@@ -29,7 +29,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import tn.esprit.mywatertunisie.Adapters.RecyclerViewCartAdapter;
+import tn.esprit.mywatertunisie.Adapters.ListViewCartAdapter;
 import tn.esprit.mywatertunisie.Entities.Cart;
 import tn.esprit.mywatertunisie.Entities.User;
 import tn.esprit.mywatertunisie.R;
@@ -47,7 +47,7 @@ public class ShowCartActivity extends AppCompatActivity {
     ListView listView;
     SwipeRefreshLayout mySwipeRefreshLayout;
 
-    RecyclerViewCartAdapter recyclerViewCartAdapter;
+    ListViewCartAdapter listViewCartAdapter;
     ProgressBar pbElect;
     TapBarMenu tapBarMenu;
 
@@ -58,7 +58,7 @@ public class ShowCartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show_cart);
 
         tapBarMenu = findViewById(R.id.tapBarMenuCart);
-       tapBarMenu.close();
+        tapBarMenu.close();
         tapBarMenu.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 tapBarMenu.toggle();
@@ -72,8 +72,8 @@ public class ShowCartActivity extends AppCompatActivity {
         listProdCart = new ArrayList<>();
 
         Log.e("loadrecycler", "loadrecycler");
-        recyclerViewCartAdapter = new RecyclerViewCartAdapter(getApplicationContext(), listProdCart);
-        listView.setAdapter(recyclerViewCartAdapter);
+        listViewCartAdapter = new ListViewCartAdapter(getApplicationContext(), listProdCart);
+        listView.setAdapter(listViewCartAdapter);
 
         pbElect = findViewById(R.id.progress_bar_cart);
         pbElect.setVisibility(View.VISIBLE);
@@ -111,7 +111,7 @@ public class ShowCartActivity extends AppCompatActivity {
 
 
         //      mRecyclerView.setLayoutManager(mLa youtManager);
-        //    mAdapter = new RecyclerViewCartAdapter(getApplicationContext(), listProdCart);
+        //    mAdapter = new ListViewCartAdapter(getApplicationContext(), listProdCart);
         //  mRecyclerView.setAdapter(mAdapter);
 
 
@@ -156,7 +156,7 @@ public class ShowCartActivity extends AppCompatActivity {
                     }
                     Log.e("AddTo ListProd", listProdCart.toString());
 
-                    recyclerViewCartAdapter.notifyDataSetChanged();
+                    listViewCartAdapter.notifyDataSetChanged();
                 } catch (JSONException e) {
 
                     Log.e("Cart ERREUR JSONexp >>>", e.getMessage());

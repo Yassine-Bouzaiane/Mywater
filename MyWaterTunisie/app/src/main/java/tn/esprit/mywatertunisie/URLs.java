@@ -2,11 +2,12 @@ package tn.esprit.mywatertunisie;
 
 public class URLs {
 
-//        private static final String baseURL = "http://172.16.191.53";
+    //        private static final String baseURL = "http://172.16.191.53";
 //    private static final String baseURL = "http://10.0.2.2";
-//        private static final String baseURL = "http://192.168.43.52";
-    private static final String baseURL = "http://192.168.1.2";
-    private static final String basePORT = ":3003";
+    private static final String baseURL = "http://41.226.11.252";
+    //    private static final String baseURL = "http://192.168.1.2";
+    private static final String basePORT = ":11823";
+    private static final String imagePORT = ":1180";
     //    public static final String URL_REGISTER = "http://localhost:3003/user_create";
     public static final String URL_REGISTER = baseURL + basePORT + "/user/user_create";
     public static final String URL_LOGIN = baseURL + basePORT + "/user/userss";
@@ -19,7 +20,7 @@ public class URLs {
     public static final String URL_PROD = baseURL + basePORT + "/produit/show";
     public static final String URL_IMAGES_CHANTIERS = baseURL + basePORT + "/chantiers/show/";
     public static final String URL_ELECT_LIST = baseURL + basePORT + "/electricite/show";
-    public static final String URL_IMG = baseURL + "/mini_project_imgs/";
+    public static final String URL_IMG = baseURL+imagePORT + "/watertn/mini_project_imgs/";
     public static final String URL_ADD_TO_CART = baseURL + basePORT + "/carte/create";
     public static final String URL_SHOW_CART_BY_USER = baseURL + basePORT + "/carte/show/";
 
